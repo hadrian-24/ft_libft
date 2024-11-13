@@ -6,13 +6,17 @@
 /*   By: jabarisi <jabarisi@student.42berlin.d>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 12:04:37 by jabarisi          #+#    #+#             */
-/*   Updated: 2024/11/11 12:05:42 by jabarisi         ###   ########.fr       */
+/*   Updated: 2024/11/13 16:28:17 by jabarisi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned char	ft_tolower(char c)
+#include "libft.h"
+
+int	ft_tolower(int c)
 {
+	if (c == EOF)
+		return (EOF);
 	if (c >= 'A' && c <= 'Z')
-		return ((unsigned char)c + 32);
-	return ((unsigned char)c);
+		return (c + 32);
+	return (c);
 }

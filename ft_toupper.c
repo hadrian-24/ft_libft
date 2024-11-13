@@ -6,13 +6,17 @@
 /*   By: jabarisi <jabarisi@student.42berlin.d>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 12:00:22 by jabarisi          #+#    #+#             */
-/*   Updated: 2024/11/11 12:04:02 by jabarisi         ###   ########.fr       */
+/*   Updated: 2024/11/13 16:28:21 by jabarisi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned char	ft_toupper(char c)
+#include "libft.h"
+
+int	ft_toupper(int c)
 {
+	if (c == EOF)
+		return (EOF);
 	if (c >= 'a' && c <= 'z')
-		return ((unsigned char)c - 32);
-	return ((unsigned char)c);
+		return (c - 32);
+	return (c);
 }

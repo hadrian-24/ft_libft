@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jadranko <jadranko@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jabarisi <jabarisi@student.42berlin.d>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:38:00 by jabarisi          #+#    #+#             */
-/*   Updated: 2024/11/11 16:22:07 by jadranko         ###   ########.fr       */
+/*   Updated: 2024/11/12 11:47:09 by jabarisi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-	char	*d;
+	char		*d;
 	size_t		i;
 
 	d = malloc(sizeof(char) * ft_strlen(s) + 1);
