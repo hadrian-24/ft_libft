@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jabarisi <jabarisi@student.42berlin.d>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 12:00:22 by jabarisi          #+#    #+#             */
-/*   Updated: 2024/11/14 10:33:08 by jabarisi         ###   ########.fr       */
+/*   Created: 2024/11/14 13:52:31 by jabarisi          #+#    #+#             */
+/*   Updated: 2024/11/14 15:01:30 by jabarisi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
+	
 }

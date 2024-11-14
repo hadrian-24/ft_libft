@@ -6,7 +6,7 @@
 /*   By: jabarisi <jabarisi@student.42berlin.d>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 12:04:37 by jabarisi          #+#    #+#             */
-/*   Updated: 2024/11/13 16:28:17 by jabarisi         ###   ########.fr       */
+/*   Updated: 2024/11/14 10:30:29 by jabarisi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 int	ft_tolower(int c)
 {
-	if (c == EOF)
-		return (EOF);
 	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
 	return (c);
