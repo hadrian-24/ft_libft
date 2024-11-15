@@ -3,20 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jabarisi <jabarisi@student.42berlin.d>     +#+  +:+       +#+        */
+/*   By: jadranko <jadranko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 17:14:21 by jabarisi          #+#    #+#             */
-/*   Updated: 2024/11/14 13:28:49 by jabarisi         ###   ########.fr       */
+/*   Updated: 2024/11/14 21:55:06 by jadranko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*The `ft_substr` function extracts a substring of length `len` from string `s`
+starting at index `start`, handling edge cases (NULL input, out-of-bounds start,
+insufficient length) and returning a newly allocated string containing the
+substring.*/
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
 	size_t	s_len;
-	size_t	i;
 
 	if (!s)
 		return (NULL);
@@ -28,12 +32,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr = (char *)malloc(sizeof(char) * (len + 1));
 	if (!substr)
 		return (NULL);
-	i = 0;
-	while (i < len)
-	{
-		substr[i] = s[start + i];
-		i++;
-	}
-	substr[i] = '\0';
+	ft_strlcpy(substr, s + start, len + 1);
 	return (substr);
 }

@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jabarisi <jabarisi@student.42berlin.d>     +#+  +:+       +#+        */
+/*   By: jadranko <jadranko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:52:31 by jabarisi          #+#    #+#             */
-/*   Updated: 2024/11/14 15:24:13 by jabarisi         ###   ########.fr       */
+/*   Updated: 2024/11/14 21:56:29 by jadranko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*The ft_strtrim function removes characters in set from both the beginning and
+end of string s1 by finding the first non-matching character from the start and
+last non-matching character from the end, then returning a new substring
+containing the trimmed result.*/
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
