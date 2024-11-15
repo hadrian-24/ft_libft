@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jadranko <jadranko@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jabarisi <jabarisi@student.42berlin.d>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:06:11 by jabarisi          #+#    #+#             */
-/*   Updated: 2024/11/14 23:39:54 by jadranko         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:06:30 by jabarisi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,10 @@ void	*ft_calloc(size_t count, size_t size)
 	unsigned char	*tmp;
 	size_t			total;
 
-	if (count != 0 && count > SIZE_MAX / size)
-		return (NULL);
 	total = count * size;
-	tmp = malloc(count * size);
+	tmp = malloc(total);
 	if (!tmp)
 		return (NULL);
-	ft_memset(tmp, 0, count * size);
+	ft_memset(tmp, 0, total);
 	return (tmp);
 }

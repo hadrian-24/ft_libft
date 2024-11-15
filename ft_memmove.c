@@ -6,13 +6,11 @@
 /*   By: jabarisi <jabarisi@student.42berlin.d>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 10:22:29 by jabarisi          #+#    #+#             */
-/*   Updated: 2024/11/12 13:15:10 by jabarisi         ###   ########.fr       */
+/*   Updated: 2024/11/15 11:52:26 by jabarisi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
