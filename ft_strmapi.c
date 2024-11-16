@@ -6,7 +6,7 @@
 /*   By: jabarisi <jabarisi@student.42berlin.d>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 14:41:57 by jabarisi          #+#    #+#             */
-/*   Updated: 2024/11/16 15:52:45 by jabarisi         ###   ########.fr       */
+/*   Updated: 2024/11/16 15:59:23 by jabarisi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*str;
-	int		i;
+	char			*str;
+	unsigned int	i;
 
 	if (!s || !f)
 		return (NULL);
