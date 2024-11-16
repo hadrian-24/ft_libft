@@ -3,41 +3,45 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jabarisi <jabarisi@student.42berlin.d>     +#+  +:+       +#+        */
+/*   By: jadranko <jadranko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:12:09 by jabarisi          #+#    #+#             */
-/*   Updated: 2024/11/15 14:57:35 by jabarisi         ###   ########.fr       */
+/*   Updated: 2024/11/15 23:39:35 by jadranko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		word_count(char const *str, char c)
+static size_t	count_words(const char *s, char c)
 {
-	int	i;
-	int	res;
+	size_t	res;
+	size_t	i;
 
-	i = 0;
 	res = 0;
-	while (str[i])
+	i = 0;
+	while (s[i])
 	{
-		if ((str[i] != c && (i == 0)) || str[i - 1] == c)
+		while (s[i] && s[i] == c)
+			i++;
+		if (s[i])
 			res++;
-		i++;
+		while (s[i] && s[i] != c)
+			i++;
 	}
 	return (res);
 }
 
-size_t find_next_word(char const *s, char c, size_t *start)
+static size_t	word_len(const char *s, size_t start, char c)
 {
-	while (s[*start] && s[*start] == c)
-		(*start)++;
-	while (s[*start] && s[*start] != c)
-		(*start)++;
-	return (*start);
+	size_t	len;
+
+	len = 0;
+	while (s[start + len] && s[start + len] != c)
+		len++;
+	return (len);
 }
 
-void	*free_array(char **array, int i)
+static void	*free_array(char **array, int i)
 {
 	while (i > 0)
 		free(array[--i]);
@@ -47,28 +51,30 @@ void	*free_array(char **array, int i)
 
 char	**ft_split(char const *s, char c)
 {
-	char			**array;
-	int				i;
+	char	**array;
+	size_t	words;
+	size_t	i;
 	size_t	start;
-	size_t	end;
+	size_t	len;
 
-	array = (char **)malloc(sizeof(char *) * (word_count(s, c) + 1));
-	if (!s || !array)
+	if (!s)
+		return (NULL);
+	words = count_words(s, c);
+	array = (char **)malloc(sizeof(char *) * (words + 1));
+	if (!array)
 		return (NULL);
 	i = 0;
 	start = 0;
-	while (s[start])
+	while (i < words)
 	{
 		while (s[start] && s[start] == c)
 			start++;
-		if (!s[start])
-			break;
-		end = find_next_word(s, c, &start);
-		array[i] = ft_substr(s, start, end - start);
+		len = word_len(s, start, c);
+		array[i] = ft_substr(s, start, len);
 		if (!array[i])
 			return (free_array(array, i));
+		start += len;
 		i++;
-		start = end;
 	}
 	array[i] = NULL;
 	return (array);
