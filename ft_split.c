@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jabarisi <jabarisi@student.42berlin.d>     +#+  +:+       +#+        */
+/*   By: zgemboadislic <zgemboadislic@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:12:09 by jabarisi          #+#    #+#             */
-/*   Updated: 2024/11/16 12:30:24 by jabarisi         ###   ########.fr       */
+/*   Updated: 2024/11/16 21:16:06 by zgemboadisl      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ static size_t	count_words(const char *s, char c)
 	return (res);
 }
 
-static size_t	word_len(const char *s, size_t start, char c)
+static size_t	word_len(const char *str, char c)
 {
 	size_t	len;
 
 	len = 0;
-	while (s[start + len] && s[start + len] != c)
+	while (str[len] && str[len] != c)
 		len++;
 	return (len);
 }
@@ -67,7 +67,7 @@ char	**ft_split(char const *s, char c)
 	{
 		while (s[start] && s[start] == c)
 			start++;
-		len = word_len(s, start, c);
+		len = word_len(&s[start], c);
 		array[i] = ft_substr(s, start, len);
 		if (!array[i])
 			return (free_array(array, i));
