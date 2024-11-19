@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jadranko <jadranko@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jabarisi <jabarisi@student.42berlin.d>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:53:55 by jabarisi          #+#    #+#             */
-/*   Updated: 2024/11/18 22:52:09 by jadranko         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:38:23 by jabarisi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
+/* # include <stdio.h> */
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdint.h>
