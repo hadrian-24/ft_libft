@@ -8,7 +8,7 @@ OBJ = $(SRC:.c=.o)
 HEADER = includes
 CFLAGS = -Wall -Wextra -Werror
 
-BONUS_SRC = ft_lstnew.c
+BONUS_SRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
 all: $(NAME)
@@ -17,25 +17,16 @@ $(NAME): $(OBJ)
 	ar -rv $(NAME) $(OBJ)
 	ranlib $(NAME)
 
-$(BONUS_OBJ): $(BONUS_SRC)
-	gcc $(CFLAGS) -I$(HEADER) -c $< -o $@
-
 %.o: %.c
 	gcc $(CFLAGS) -I$(HEADER) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(BONUS_OBJ)
 
 fclean: clean
 	rm -f $(NAME)
 
-bonus: $(BONUS_OBJ)
-	ar -rv $(NAME) $(BONUS_OBJ)
-	ranlib $(NAME)
-
-test: $(NAME)
-	gcc $(CFLAGS) -I$(HEADER) test_libft/main.c -o test_libft/test_program $(NAME)
-	./test_libft/test_program
-	make fclean
+bonus: $(NAME) $(BONUS_OBJ)
+	ar -rcs $(NAME) $(BONUS_OBJ)
 
 re: fclean all
