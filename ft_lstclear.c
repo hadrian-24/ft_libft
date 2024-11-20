@@ -6,7 +6,7 @@
 /*   By: jabarisi <jabarisi@student.42berlin.d>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:37:05 by jabarisi          #+#    #+#             */
-/*   Updated: 2024/11/20 11:49:37 by jabarisi         ###   ########.fr       */
+/*   Updated: 2024/11/20 15:35:24 by jabarisi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		free (*lst);
 		*lst = temp;
 	}
+	*lst = NULL;
 }
