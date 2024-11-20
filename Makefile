@@ -8,7 +8,9 @@ OBJ = $(SRC:.c=.o)
 HEADER = includes
 CFLAGS = -Wall -Wextra -Werror
 
-BONUS_SRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c
+BONUS_SRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
+ft_lstclear.c ft_lstiter.c ft_lstmap.c
+
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
 all: $(NAME)
