@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jabarisi <jabarisi@student.42berlin.d>     +#+  +:+       +#+        */
+/*   By: jabarisi <jabarisi@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:06:11 by jabarisi          #+#    #+#             */
-/*   Updated: 2024/11/20 18:18:07 by jabarisi         ###   ########.fr       */
+/*   Updated: 2024/11/20 22:06:00 by jabarisi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* The `ft_calloc` function allocates memory for an array of `count` elements of
-`size` bytes each and initializes all bytes to zero using `ft_memset`, returning
-NULL if allocation fails.*/
 
 void	*ft_calloc(size_t count, size_t size)
 {
