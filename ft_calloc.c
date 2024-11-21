@@ -6,7 +6,7 @@
 /*   By: jabarisi <jabarisi@student.42berlin.d>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:06:11 by jabarisi          #+#    #+#             */
-/*   Updated: 2024/11/20 18:18:07 by jabarisi         ###   ########.fr       */
+/*   Updated: 2024/11/21 10:45:26 by jabarisi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,8 @@ void	*ft_calloc(size_t count, size_t size)
 	unsigned char	*ptr;
 	size_t			total;
 
-	if (!size || !count)
-	{
-		count = 1;
-		size = 1;
-	}
+	if (count == 0 || size == 0)
+		return (malloc(0));
 	else if (count > SIZE_MAX / size)
 		return (NULL);
 	total = count * size;
