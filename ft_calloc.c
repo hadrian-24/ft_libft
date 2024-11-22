@@ -9,7 +9,6 @@
 /*   Updated: 2024/11/21 10:45:26 by jabarisi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
@@ -22,6 +21,8 @@ void	*ft_calloc(size_t count, size_t size)
 	else if (count > SIZE_MAX / size)
 		return (NULL);
 	total = count * size;
+	if (total < count || total < size)
+		return (NULL);
 	ptr = malloc(total);
 	if (!ptr)
 		return (NULL);
