@@ -6,16 +6,11 @@
 /*   By: jabarisi <jabarisi@student.42berlin.d>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 13:48:44 by jabarisi          #+#    #+#             */
-/*   Updated: 2024/11/15 12:09:43 by jabarisi         ###   ########.fr       */
+/*   Updated: 2024/11/22 11:58:51 by jabarisi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* The `ft_strlcat` function safely concatenates a source string (`src`) onto
-the end of a destination string (`dest`) within a size-limited buffer, returning
-the total length the combined string would have been while ensuring
-null-termination and preventing buffer overflows. */
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {

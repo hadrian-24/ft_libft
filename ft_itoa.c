@@ -6,31 +6,27 @@
 /*   By: jabarisi <jabarisi@student.42berlin.d>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 12:44:25 by jabarisi          #+#    #+#             */
-/*   Updated: 2024/11/16 14:53:18 by jabarisi         ###   ########.fr       */
+/*   Updated: 2024/11/22 10:36:18 by jabarisi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// Allocates (with malloc(3)) and returns a string
-// representing the integer received as an argument.
-// Negative numbers must be handled.
 
 #include "libft.h"
 
 static int	count_digits(long n)
 {
-	int	res;
+	int	result;
 
-	res = 0;
+	result = 0;
 	if (n <= 0)
-		res = 1;
+		result = 1;
 	if (n < 0)
 		n *= -1;
 	while (n > 0)
 	{
 		n /= 10;
-		res++;
+		result++;
 	}
-	return (res);
+	return (result);
 }
 
 char	*ft_itoa(int n)
@@ -59,11 +55,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-/*
-int	main(void)
-{
-	printf("%s\n", ft_itoa(-2147483648));
-	printf("%s\n", ft_itoa(0));
-	printf("%s\n", ft_itoa(2147483647));
-	return (0);
-}*/
