@@ -10,11 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* The ft_strchr (string-find-character) function searches for the first
-occurrence of character c in string s and returns a pointer to it, or NULL
-if the character is not found (unless it's '\0', in which case it returns
-a pointer to the string's terminator).*/
-
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
